@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet" />
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="app">
+    <ion-view>
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Awesome App</h1>
+        </ion-header-bar>
+        <ion-content class="padding">
+            <div class="cardfan">
+                <img src="../images/1.jpg" alt="Photograph of Florence, Italy">
+                <img src="../images/2.jpg" alt="Photograph of an ancient aqueduct, Italy">
+                <img src="../images/3.jpg" alt="Photograph of a bike on a Roman Street">
+            </div>
+        </ion-content>
+    </ion-view>
+
+    <style type="text/css">
+        div.cardfan {
+            height: 356px;
+            width: 700px;
+            margin: 2rem auto 0;
+            position: relative;
+        }
+
+        div.cardfan img {
+            position: absolute;
+            left: 200px;
+            width: 300px;
+            height: 200px;
+            border: 12px solid #ffe;
+            box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2);
+            transform-origin: center 400px;
+            transition: all .6s linear;
+        }
+
+        div.cardfan img:first-child {
+            transform: rotate(5deg);
+        }
+
+        div.cardfan img:last-child {
+            transform: rotate(-5deg);
+        }
+
+        div.cardfan:hover img:first-child {
+            transform: rotate(25deg);
+        }
+
+        div.cardfan:hover img:last-child {
+            transform: rotate(-25deg);
+        }
+    </style>
+
+
+</body>
+
+
+
+</html>

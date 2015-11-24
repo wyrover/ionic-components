@@ -1,0 +1,16 @@
+<ion-view view-title="List">
+    <ion-content>
+        <!-- <ion-list>
+            <ion-item class="item" ng-repeat="chat in chats">
+                <a href="#/detail/{{ chat.id }}">{{ chat.name }} {{ chat.lastText }}</a>
+            </ion-item>
+        </ion-list> -->
+        <div class="list">
+            <a class="item item-thumbnail-left" href="#/detail/{{ chat.id }}" ng-repeat="chat in chats">
+              <h2 class="">{{ chat.name }}</h2>
+              <p>{{ chat.lastText }}</p>
+            </a>
+        </div>
+        <a class="item item-thumbnail-left" ng-click="doLogout()">Logout</a>
+    </ion-content>
+</ion-view>

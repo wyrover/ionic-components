@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    <link rel="stylesheet" type="text/css" href="style5.css" />
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+    <script src="modernizr.custom.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="app">
+    <ion-view>
+        <!--<ion-header-bar class="bar-stable">
+            <h1 class="title">Awesome App</h1>
+        </ion-header-bar>-->
+        <ion-content class="padding">
+            <div class="item item-divider">
+                Settings
+            </div>
+
+            <div class="item">
+                <button class="button button-light">I'm a button</button>
+            </div>
+
+            <button class="button button-stable">I'm a button</button>
+            <button class="button button-positive">I'm a button</button>
+            <button class="button button-calm">I'm a button</button>
+            <button class="button button-balanced">I'm a button</button>
+            <button class="button button-energized">I'm a button</button>
+            <button class="button button-assertive">I'm a button</button>
+            <button class="button button-royal">I'm a button</button>
+            <button class="button button-dark">I'm a button</button>
+            <button class="button button-balanced" id="trigger-overlay">Open Overlay</button>
+
+
+            <div class="card">
+                <div class="item">
+                    A Material design style menu with fast action buttons.
+                    <br>
+                    <ol>
+                        <li>Click to open the menu</li>
+                        <li>Use mouse/touch to spin the buttons (drag on different direction)</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="card" ng-if="showCard">
+                <div class="item item-divider">
+                    Email sent
+                </div>
+                <div class="item item-text-wrap">
+                    You received an email to reset your password. Reset your password and login!
+                </div>
+            </div>
+
+            <div class="list">
+                <label class="item item-input">
+                    <input type="email" placeholder="Email address">
+                </label>
+                <label class="item item-input">
+                    <input type="password" placeholder="Password">
+                </label>
+                <button class="button button-block button-positive">Login</button>
+                <button class="button button-block button-positive button-outline" ng-click="forgotPassword()">Forgot password?</button>
+            </div>
+
+
+
+        </ion-content>
+
+        <div class="overlay overlay-scale">
+            <button type="button" class="overlay-close">Close</button>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Work</a></li>
+                    <li><a href="#">Clients</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </ion-view>
+
+
+    <script src="classie.js"></script>
+    <script src="demo1.js"></script>
+</body>
+
+</html>

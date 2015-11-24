@@ -1,0 +1,38 @@
+<ion-view view-title="Profile" enable-menu-with-back-views="false" ng-init="init()">
+	
+	<ion-content scroll="false">
+		<div class="row">
+			<div class="col col-20"></div>
+			<div class="col col-60 text-center">
+				<h4 class="title">{{ user.fullname }}</h4>
+			</div>
+			<div class="col col-20"></div>
+		</div>
+		<div class="list list-inset">
+			<label class="item item-input">
+				<input type="text" placeholder="Fullname" ng-model="user.fullname">
+			</label>
+			<label class="item item-input">
+				<input type="email" placeholder="Email" ng-model="user.email" ng-disabled="true">
+			</label>
+			<label class="item item-input">
+				<input type="text" placeholder="Mobile" ng-model="user.mobile">
+			</label>
+		</div>
+	</ion-content>
+	<ion-footer-bar>
+		<div class="row row-center">
+			<div class="col text-center">
+				<h6 >Member Since : {{ user.created_at | date:medium }}</h6>
+			</div>
+		</div>
+	</ion-footer-bar>
+</ion-view>
+
+
+
+
+
+
+
+

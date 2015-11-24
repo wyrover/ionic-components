@@ -1,0 +1,55 @@
+/* Empty. Add your own CSS if you like */
+
+
+body {
+	background: #22A7F0;
+	color:#EEEEEE;
+}
+
+.login {
+	background: transparent;
+}
+
+.login label {
+	background: transparent;
+	border:none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.06)
+}
+
+.login .icon {
+	margin-right: 20px;
+	font-size: 25px;
+	color: #EEEEEE;
+}
+
+.login input[type="email"], .login input[type="password"] {
+	color:#EEEEEE;
+}
+
+.login h6 {
+	color: #EEEEEE;
+}
+
+.button-rounded {
+	border: none;
+	border-radius: 2em;
+	color:#22A7F0;
+}
+
+.footer {
+	background: transparent;
+}
+
+.footer h6{
+	color: #EEEEEE;
+}
+
+
+
+
+
+
+
+
+
+

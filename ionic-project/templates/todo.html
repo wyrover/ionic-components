@@ -1,0 +1,15 @@
+<ion-view view-title="Todo" ng-init="list()">
+	<ion-nav-buttons side="right">
+		<button class="button button-icon" ng-click="newTodo()"><i class="icon ion-compose"></i></button>
+	</ion-nav-buttons>
+	<ion-content>
+		<ion-list show-delete="false" can-swipe="true">
+			<ion-item ng-repeat="(key, todo) in todos">
+				<h4>{{ todo.title }}</h4>
+				<p>{{ todo.created_at | date:medium }}</p>
+				<ion-option-button class="button-positive icon ion-edit" ng-click="editTodo(todo)"></ion-option-button>
+				<ion-option-button class="button-assertive icon ion-trash-a" ng-click="removeTodo(key)"></ion-option-button>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

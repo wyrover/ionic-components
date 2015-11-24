@@ -1,0 +1,28 @@
+<div class="modal" title="">
+	<ion-header-bar class="bar bar-positive bar-secondary">
+		<h1 class="title">{{ modalTitle }}</h1>
+		<buttton class="button button-clear button-stable" ng-click="closeModal()">Cancel</buttton>
+	</ion-header-bar>
+	<ion-content>
+		<form ng-submit="(hideAndSeek) ? createTodo(todo) : ''">
+			<div class="list">
+				<label class="item item-input">
+					<input type="text" placeholder="What you need todo today?" ng-model="todo.title"/>
+				</label>
+			</div>
+			<div class="padding">
+				<button type="submit" ng-show="hideAndSeek" class="button button-positive button-block"><i class="icon ion-plus-round"></i> Create Todo</button>
+				<button ng-hide="hideAndSeek" class="button button-positive button-block" ng-click="closeModal()"><i class="icon ion-ios-download"></i> Save Todo</button>
+			</div>
+		</form>	
+	</ion-content>
+</div>
+
+
+
+
+
+
+
+
+

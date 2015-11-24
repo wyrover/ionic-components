@@ -1,0 +1,33 @@
+<ion-view view-title="New Contact" has-header="false">
+	
+	<ion-content>
+		<div class="row row-center">
+			<div class="col text-center">
+				<h2>New Contact</h2>
+			</div>
+		</div>
+		<div class="list list-inset">
+			<label class="item item-input">
+				<input type="text" placeholder="Fullname" ng-model="contact.fullname">
+			</label>
+			<label class="item item-input">
+				<input type="email" placeholder="Email" ng-model="contact.email">
+			</label>
+			<label class="item item-input">
+				<input type="text" placeholder="Mobile Phone" ng-model="contact.mobile">
+			</label>
+			<a class="button button-block button-assertive" ng-click="createContact(contact)">Submit</a>
+			<a class="button button-block button-stable" href="#/menu/contacts">Cancel</a>
+		</div>
+	</ion-content>
+</ion-view>
+
+
+
+
+
+
+
+
+
+

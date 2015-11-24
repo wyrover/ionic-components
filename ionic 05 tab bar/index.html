@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+    <title>Ionic Framework Example</title>
+    <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet" />
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <ion-nav-bar class="bar-balanced">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-view ng-controller="AppCtrl"></ion-nav-view>
+
+    <script id="templates/tabs.html" type="text/ng-template">
+        <ion-tabs class="tabs-icon-top tabs-balanced">
+
+            <ion-tab title="Search" icon="ion-search" href="#/tab/home">
+                <ion-nav-view name="home-tab"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="Settings" icon="ion-settings" href="#/tab/about">
+                <ion-nav-view name="about-tab"></ion-nav-view>
+            </ion-tab>
+
+            <ion-tab title="Sign Out" icon="ion-power" ui-sref="tabs.contact">
+                <ion-nav-view name="contact-tab"></ion-nav-view>
+            </ion-tab>
+
+        </ion-tabs>
+    </script>
+
+    <script id="templates/home.html" type="text/ng-template">
+        <ion-view view-title="Search a Movie Database">
+            <ion-content class="padding">
+                <p>
+                    Content goes here
+                </p>
+            </ion-content>
+        </ion-view>
+    </script>
+
+    <script id="templates/about.html" type="text/ng-template">
+        <ion-view view-title="Application Settings">
+            <ion-content class="padding">
+                <p>
+                    Content goes here
+                </p>
+            </ion-content>
+        </ion-view>
+    </script>
+
+    <script id="templates/contact.html" type="text/ng-template">
+        <ion-view title="Sign Out">
+            <ion-content class="padding">
+                <p>
+                    Content goes here
+                </p>
+            </ion-content>
+        </ion-view>
+    </script>
+
+</body>
+
+</html>

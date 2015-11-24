@@ -1,0 +1,52 @@
+<ion-view view-title="Register">
+	<ion-header-bar align-title="left">
+		<a class="button button-icon" href="#/login">
+			<i class="icon ion-android-arrow-back"></i>
+		</a>
+	</ion-header-bar>
+	<ion-content scroll="false">
+		<div class="row row-center">
+			<div class="col text-center">
+				<h2>Sign Up</h2>
+				<h6>One more step</h6>
+			</div>
+		</div>
+		<div class="list list-inset">
+			<label class="item item-input">
+				<input type="text" placeholder="Fullname" ng-model="user.fullname">
+			</label>
+			<label class="item item-input">
+				<input type="email" placeholder="Email" ng-model="user.email">
+			</label>
+			<label class="item item-input">
+				<input type="password" placeholder="Password" ng-model="user.password">
+			</label>
+			<label class="item item-input">
+				<input type="text" placeholder="Phone" ng-model="user.mobile">
+			</label>
+			<a class="button button-block button-assertive" ng-click="register(user)">Join</a>
+		</div>
+	</ion-content>
+	<ion-footer-bar>
+		<div class="row row-center">
+	        <div class="col text-center">
+	          <h6>Already have an account?<span><b><a href="#/login"> Sign In</a></b></span></h6>
+	        </div>
+	      </div>
+	</ion-footer-bar>
+</ion-view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

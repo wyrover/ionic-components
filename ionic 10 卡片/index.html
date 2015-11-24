@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet" />
+    <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-app="app">
+    <ion-pane>
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">Awesome App</h1>
+        </ion-header-bar>
+        <ion-content class="padding">
+            <div class="autocaption">
+
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/north-falls-sublimity-oregon.jpg" alt="Photograph of North Falls, Silver Falls State Park">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/shepperds-dell-columbia-gorge.jpg" alt="Photograph of Shepperds Dell, Columbia Gorge">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/upper-butte-creek-falls.jpg" alt="Photograph of Upper Butte Creek Falls">
+            </div>
+        </ion-content>
+    </ion-pane>
+
+    <style type="text/css">
+        body {
+            margin: 0;
+            background: #e8e8e8;
+        }
+
+        div.autocaption {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        div.autocaption > * {
+            margin: 0;
+            padding: 0;
+            width: 27%;
+            border: 7px solid white;
+            margin: 10px;
+            background: #fff;
+            display: inline-block;
+            box-shadow: 0 10px 8px -6px rgba(0, 0, 0, 0.2);
+        }
+
+        div.autocaption figure img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.autocaption figure figcaption {
+            padding: 5px;
+            text-align: left;
+            color: #333;
+            font-family: Avenir, Arial, sans-serif;
+        }
+
+        div.autocaption figure figcaption:first-letter {
+            text-transform: uppercase;
+        }
+
+        @media screen and (max-width: 600px) {
+            div.autocaption figure {
+                width: 90%;
+            }
+        }
+    </style>
+
+    <script>
+        $(document).ready(function() {
+            var images = document.querySelectorAll(".autocaption img"),
+                L = images.length,
+                fig = document.createElement('figure'),
+                who, temp
+            while (L) {
+                temp = fig.cloneNode(false);
+                who = images[--L];
+                alt = who.getAttribute("alt");
+                alt = alt.substring(14);
+                who.parentNode.insertBefore(temp, who);
+                content = document.createElement('figcaption')
+                content.innerHTML = alt;
+                temp.appendChild(who);
+                temp.appendChild(content);
+            }
+        })
+    </script>
+</body>
+
+
+
+</html>

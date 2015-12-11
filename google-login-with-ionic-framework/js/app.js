@@ -6,46 +6,46 @@
 angular.module('starter', ['ionic', 'controllers', 'services'])
 
 .run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-  });
+    $ionicPlatform.ready(function() {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
+        if (window.cordova && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        }
+        if (window.StatusBar) {
+            StatusBar.styleDefault();
+        }
+    });
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
-  $stateProvider
+    $stateProvider
 
-  .state('welcome', {
-    url: '/welcome',
-    templateUrl: "views/welcome.html",
-    controller: 'WelcomeCtrl'
-  })
+        .state('welcome', {
+        url: '/welcome',
+        templateUrl: "views/welcome.html",
+        controller: 'WelcomeCtrl'
+    })
 
-  .state('app', {
-    url: "/app",
-    abstract: true,
-    templateUrl: "views/sidemenu.html",
-    controller: 'AppCtrl'
-  })
+    .state('app', {
+        url: "/app",
+        abstract: true,
+        templateUrl: "views/sidemenu.html",
+        controller: 'AppCtrl'
+    })
 
-  .state('app.home', {
-    url: "/home",
-    views: {
-      'menuContent': {
-        templateUrl: "views/home.html",
-        controller: 'HomeCtrl'
-      }
-    }
-  })
+    .state('app.home', {
+        url: "/home",
+        views: {
+            'menuContent': {
+                templateUrl: "views/home.html",
+                controller: 'HomeCtrl'
+            }
+        }
+    })
 
-  ;
+    ;
 
-  // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/welcome');
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/welcome');
 })

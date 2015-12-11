@@ -16,29 +16,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 .config(function($stateProvider, $urlRouterProvider) {
 
     $stateProvider
-
         .state('login', {
-        url: '/login',
-        templateUrl: 'templates/login.html',
-        controller: 'LoginCtrl'
-    })
-
-    .state('menu', {
-        url: '/menu',
-        templateUrl: 'templates/menu.html',
-        abstract: true,
-        controller: 'AppCtrl'
-    })
-
-    .state('menu.todo', {
-        url: '/todo',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/todo.html',
-                controller: 'TodoCtrl'
+            url: '/login',
+            templateUrl: 'templates/login.html',
+            controller: 'LoginCtrl'
+        })
+        .state('menu', {
+            url: '/menu',
+            templateUrl: 'templates/menu.html',
+            abstract: true,
+            controller: 'AppCtrl'
+        })
+        .state('menu.todo', {
+            url: '/todo',
+            views: {
+                'menuContent': {
+                    templateUrl: 'templates/todo.html',
+                    controller: 'TodoCtrl'
+                }
             }
-        }
-    })
+        })
 
     $urlRouterProvider.otherwise('/login');
 })
